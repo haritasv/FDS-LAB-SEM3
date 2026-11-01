@@ -1,0 +1,16 @@
+ 0      1      2
+0  1  Smith  50000
+1  2  Jones  60000
+   EmpId   Name  Salary
+0      1  Smith   50000
+1      2  Jones   60000
+<class 'pandas.DataFrame'>
+RangeIndex: 2 entries, 0 to 1
+Data columns (total 3 columns):
+ #   Column  Non-Null Count  Dtype
+---  ------  --------------  -----
+ 0   EmpId   2 non-null      int64
+ 1   Name    2 non-null      str  
+ 2   Salary  2 non-null      int64
+dtypes: int64(2), str(1)
+memory usage: 180.0 bytes

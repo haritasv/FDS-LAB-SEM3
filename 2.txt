@@ -1,0 +1,33 @@
+        Date    Product  Sales  Quantity Region
+0 2023-01-01  Product A    200         4  North
+1 2023-01-02  Product B    150         3  South
+2 2023-01-03  Product A    220         5  North
+3 2023-01-04  Product C    300         6   East
+4 2023-01-05  Product B    180         4   West
+Date        0
+Product     0
+Sales       0
+Quantity    0
+Region      0
+dtype: int64
+            Sales   Quantity
+count   16.000000  16.000000
+mean   237.500000   5.375000
+std     64.031242   1.746425
+min    150.000000   3.000000
+25%    187.500000   4.000000
+50%    225.000000   5.500000
+75%    302.500000   7.000000
+max    340.000000   8.000000
+           Sales  Quantity
+Product                   
+Product A   1350        33
+Product B    850        17
+Product C   1600        36
+
+Product  Product A  Product B  Product C
+Region                                  
+East             0          0       1600
+North          900          0          0
+South          210        510          0
+West           240        340          0

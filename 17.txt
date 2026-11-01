@@ -1,0 +1,49 @@
+Dataset created successfully!
+
+First five records:
+   YearsExperience  Salary
+0              1.1   39343
+1              1.3   46205
+2              1.5   37731
+3              2.0   43525
+4              2.2   39891
+
+Missing Values:
+YearsExperience    0
+Salary             0
+dtype: int64
+
+Total Records: 30
+
+
+Training Records: 24
+Testing Records: 6
+
+Model trained successfully!
+
+Actual Salaries:
+[ 37731 122391  57081  63218 116969 109431]
+
+Predicted Salaries:
+[ 40748.96184072 122699.62295594  64961.65717022  63099.14214487
+ 115249.56285456 107799.50275317]
+
+MODEL EVALUATION
+Mean Absolute Error: 2446.17
+Mean Squared Error: 12823412.3
+Root Mean Squared Error: 3580.98
+R2 Score: 0.9882
+
+
+SALARY PREDICTION EQUATION
+Slope: 9312.58
+Intercept: 26780.1
+Salary = 9312.58 * YearsExperience + 26780.10
+
+Model saved successfully as SalaryPred.model
+Saved model loaded successfully!
+
+SALARY PREDICTION FOR A NEW EMPLOYEE
+
+Enter years of experience: 
+

@@ -1,0 +1,138 @@
+EXPERIMENT 11: PANDAS LIBRARY
+
+DataFrame:
+   Emp_id   Name  Salary
+0       1  Smith   50000
+1       2  Jones   60000
+
+First 5 Rows:
+   Emp_id   Name  Salary
+0       1  Smith   50000
+1       2  Jones   60000
+
+Last 5 Rows:
+   Emp_id   Name  Salary
+0       1  Smith   50000
+1       2  Jones   60000
+
+DataFrame Information:
+<class 'pandas.DataFrame'>
+RangeIndex: 2 entries, 0 to 1
+Data columns (total 3 columns):
+ #   Column  Non-Null Count  Dtype
+---  ------  --------------  -----
+ 0   Emp_id  2 non-null      int64
+ 1   Name    2 non-null      str  
+ 2   Salary  2 non-null      int64
+dtypes: int64(2), str(1)
+memory usage: 180.0 bytes
+
+Salary Column:
+0    50000
+1    60000
+Name: Salary, dtype: int64
+
+Mean Salary: 55000.0
+Median Salary: 55000.0
+Mode Salary: [50000, 60000]
+Variance: 50000000.0
+Standard Deviation: 7071.067811865475
+
+Statistical Summary:
+         Emp_id        Salary
+count  2.000000      2.000000
+mean   1.500000  55000.000000
+std    0.707107   7071.067812
+min    1.000000  50000.000000
+25%    1.250000  52500.000000
+50%    1.500000  55000.000000
+75%    1.750000  57500.000000
+max    2.000000  60000.000000
+
+Column Names:
+Index(['Emp_id', 'Name', 'Salary'], dtype='str')
+
+DataFrame Values:
+[[1 'Smith' 50000]
+ [2 'Jones' 60000]]
+
+
+EXPERIMENT 15: DATA PREPROCESSING
+
+Original Dataset:
+   Country   Age   Salary Purchased
+0   France  44.0  72000.0        No
+1    Spain  27.0  48000.0       Yes
+2  Germany  30.0  54000.0        No
+3    Spain  38.0  61000.0        No
+4  Germany   NaN  63778.0       Yes
+5   France  35.0  58000.0       Yes
+6    Spain   NaN  52000.0        No
+7   France  48.0  79000.0       Yes
+8      NaN  50.0  83000.0        No
+9   France  37.0      NaN       Yes
+
+Dataset Information:
+<class 'pandas.DataFrame'>
+RangeIndex: 10 entries, 0 to 9
+Data columns (total 4 columns):
+ #   Column     Non-Null Count  Dtype  
+---  ------     --------------  -----  
+ 0   Country    9 non-null      str    
+ 1   Age        8 non-null      float64
+ 2   Salary     9 non-null      float64
+ 3   Purchased  10 non-null     str    
+dtypes: float64(2), str(2)
+memory usage: 452.0 bytes
+
+Dataset After Handling Missing Values:
+   Country   Age   Salary Purchased
+0   France  44.0  72000.0        No
+1    Spain  27.0  48000.0       Yes
+2  Germany  30.0  54000.0        No
+3    Spain  38.0  61000.0        No
+4  Germany  37.5  63778.0       Yes
+5   France  35.0  58000.0       Yes
+6    Spain  37.5  52000.0        No
+7   France  48.0  79000.0       Yes
+8   France  50.0  83000.0        No
+9   France  37.0  63420.0       Yes
+
+Country Dummy Variables:
+   France  Germany  Spain
+0    True    False  False
+1   False    False   True
+2   False     True  False
+3   False    False   True
+4   False     True  False
+5    True    False  False
+6   False    False   True
+7    True    False  False
+8    True    False  False
+9    True    False  False
+
+Final Preprocessed Dataset:
+   France  Germany  Spain   Age   Salary  Purchased
+0    True    False  False  44.0  72000.0          0
+1   False    False   True  27.0  48000.0          1
+2   False     True  False  30.0  54000.0          0
+3   False    False   True  38.0  61000.0          0
+4   False     True  False  37.5  63778.0          1
+5    True    False  False  35.0  58000.0          1
+6   False    False   True  37.5  52000.0          0
+7    True    False  False  48.0  79000.0          1
+8    True    False  False  50.0  83000.0          0
+9    True    False  False  37.0  63420.0          1
+
+Statistical Summary:
+             Age        Salary
+count  10.000000     10.000000
+mean   38.400000  63419.800000
+std     7.256415  11508.544476
+min    27.000000  48000.000000
+25%    35.500000  55000.000000
+50%    37.500000  62210.000000
+75%    42.500000  69944.500000
+max    50.000000  83000.000000
+
+RESULT: Pandas operations and data preprocessing completed successfully.
